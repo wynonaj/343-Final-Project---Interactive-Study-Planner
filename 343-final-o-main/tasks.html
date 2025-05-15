@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- basic setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks – Interactive Study Planner</title>
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style/style.css">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- top header -->
+  <header>
+    <h1>Interactive Study Planner</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="progress.html">Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- add task form -->
+    <h2>Add a Task</h2>
+    <form id="task-form">
+      <label for="task">Task Name:</label><br>
+      <input type="text" id="task" placeholder="e.g. Study for bio quiz" required><br><br>
+
+      <label for="category">Category:</label><br>
+      <select id="category" required>
+        <option value="">Select category</option>
+        <option value="homework">Homework</option>
+        <option value="exam">Exam Prep</option>
+        <option value="reading">Reading</option>
+        <option value="project">Project</option>
+        <option value="other">Other</option>
+      </select><br><br>
+
+      <label for="due">Due Date:</label><br>
+      <input type="date" id="due" required><br><br>
+
+      <!-- priority radio buttons -->
+      <fieldset>
+        <legend>Priority Level:</legend>
+        <div class="radio-group">
+          <input type="radio" id="low" name="priority" value="low">
+          <label for="low">Low</label>
+          <input type="radio" id="medium" name="priority" value="medium" checked>
+          <label for="medium">Medium</label>
+          <input type="radio" id="high" name="priority" value="high">
+          <label for="high">High</label>
+        </div>
+      </fieldset><br>
+
+      <!-- checkbox for recurring task -->
+      <div class="checkbox-group">
+        <input type="checkbox" id="recurring" name="recurring">
+        <label for="recurring">Recurring task</label>
+      </div><br>
+
+      <label for="estimated-time">Estimated Time (minutes):</label><br>
+      <input type="number" id="estimated-time" min="5" step="5" value="30"><br><br>
+
+      <label for="notes">Notes:</label><br>
+      <textarea id="notes" rows="3" placeholder="Any additional details..."></textarea><br><br>
+
+      <button type="submit"><i class="fas fa-plus"></i> Add Task</button>
+    </form>
+
+    <!-- task list section -->
+    <h2>Your Tasks</h2>
+    <div id="task-list"></div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Osvaldo Correa and Wynona Janer</p>
+  </footer>
+
+  <!-- javascript -->
+  <script src="script/tasks.js"></script>
+</body>
+</html>

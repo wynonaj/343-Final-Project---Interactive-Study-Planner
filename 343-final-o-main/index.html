@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- basic setup stuff -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Study Planner</title>
+  <!-- link to our stylesheet -->
+  <link rel="stylesheet" href="style/style.css">
+  <!-- font awesome for the icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- header with title and nav -->
+  <header>
+    <h1>Interactive Study Planner</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="progress.html">Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- main dashboard with grid layout -->
+    <div class="dashboard-grid">
+      <section class="welcome-section">
+        <h2>Welcome to Your Study Dashboard</h2>
+        <p>This app helps you stay organized, track your study goals, and stay motivated.</p>
+      </section>
+      <section class="tasks-section">
+        <h3>Your Upcoming Tasks</h3>
+        <!-- tasks will be loaded here by js -->
+        <div id="home-task-list" class="task-box"></div>
+      </section>
+      <section class="quote-section">
+        <h3>Daily Motivation</h3>
+        <!-- quote will be loaded by API -->
+        <p><em id="quote">Loading...</em></p>
+      </section>
+    </div>
+    <!-- sticky notes section -->
+    <section class="sticky-notes-section">
+      <h3>Quick Notes <button id="add-note" class="btn-small" type="button"><i class="fas fa-plus"></i> Add Note</button></h3>
+      <div id="sticky-notes-container"></div>
+    </section>
+  </main>
+
+  <!-- footer with names -->
+  <footer>
+    <p>&copy; 2025 Osvaldo Correa and Wynona Janer</p>
+  </footer>
+
+  <!-- script files -->
+  <script src="script/api.js"></script>
+  <script src="script/home-tasks.js"></script>
+  <script src="script/sticky-notes.js"></script>
+</body>
+</html>

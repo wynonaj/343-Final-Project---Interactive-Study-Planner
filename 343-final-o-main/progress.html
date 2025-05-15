@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- basic setup -->
+  <meta charset="UTF-8">
+  <title>Progress – Study Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css and icons -->
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- header with navigation -->
+  <header>
+    <h1>Interactive Study Planner</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="progress.html">Progress</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Your Study Progress</h2>
+    <!-- grid layout for stats and completed tasks -->
+    <div class="dashboard-grid">
+      <!-- stats cards section -->
+      <section class="stats-section">
+        <h3>Task Statistics</h3>
+        <div id="task-stats">
+          <div class="stat-card">
+            <i class="fas fa-tasks"></i>
+            <span id="total-tasks">0</span>
+            <p>Total Tasks</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-check-circle"></i>
+            <span id="completed-tasks">0</span>
+            <p>Completed</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-hourglass-half"></i>
+            <span id="pending-tasks">0</span>
+            <p>Pending</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-percentage"></i>
+            <span id="completion-rate">0%</span>
+            <p>Completion Rate</p>
+          </div>
+          <div class="stat-card" id="upcoming-tasks">
+            <i class="fas fa-calendar-day"></i>
+            <span>0</span>
+            <p>Due Soon</p>
+          </div>
+          <div class="stat-card" id="high-priority">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>0%</span>
+            <p>High Priority</p>
+          </div>
+        </div>
+      </section>
+      <!-- completed tasks list -->
+      <section class="recent-section">
+        <h3>Recently Completed Tasks</h3>
+        <div id="completed-list">
+          <p class="empty-state">No completed tasks yet.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Osvaldo Correa and Wynona Janer</p>
+  </footer>
+
+  <!-- js file for progress page -->
+  <script src="script/progress.js"></script>
+</body>
+</html>
